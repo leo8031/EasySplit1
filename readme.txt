@@ -2,6 +2,9 @@ Our purpose:
 * 本程式可以提供使用者針對現有組織進行簡單分類，以達到在疫情下分組上班的目的
 
 Steps:
+* 下載分組app(無圖版)_v0.3.7z後解壓縮
+* 運行grouping.exe
+* 等程式跳出input the data source:後開始輸入資訊
 * excel轉csv檔
 * 輸入設定
 * 完成後打開結果csv
