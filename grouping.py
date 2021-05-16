@@ -27,8 +27,8 @@ if __name__ == '__main__':
 
     # clustering
     disMat = sch.distance.pdist(df1, 'euclidean')
-    Z = sch.linkage(disMat, method='average')
-    P = sch.dendrogram(Z, labels=name_list)
+    Z = sch.linkage(disMat, method = 'average')
+    P = sch.dendrogram(Z, labels = name_list)
     ## plt.show()
     
     # team list
