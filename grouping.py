@@ -25,14 +25,12 @@ if __name__ == '__main__':
     import numpy as np
     import matplotlib.pylab as plt
 
-    # 1. 層次聚類
-    # 生成點與點之間的距離矩陣,這裡用的歐氏距離:
+    # clustering
     disMat = sch.distance.pdist(df1, 'euclidean')
-    # 進行層次聚類:
     Z = sch.linkage(disMat, method='average')
-    # 將層級聚類結果以樹狀圖表示出來並儲存為plot_dendrogram.png
     P = sch.dendrogram(Z, labels=name_list)
-
+    ## plt.show()
+    
     # team list
     if len(P['ivl']) % group == 0:
         temp = np.asarray(P['ivl'])
