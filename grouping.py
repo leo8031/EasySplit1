@@ -21,9 +21,7 @@ if __name__ == '__main__':
     # hierarchy graph
     import scipy
     import scipy.cluster.hierarchy as sch
-    from scipy.cluster.vq import vq, kmeans, whiten
     import numpy as np
-    import matplotlib.pylab as plt
 
     # clustering
     disMat = sch.distance.pdist(df1, 'euclidean')
