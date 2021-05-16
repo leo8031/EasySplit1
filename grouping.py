@@ -1,0 +1,47 @@
+if __name__ == '__main__':
+    # input setting
+    in_dir = input("input the data source: \n")
+    ot_dir = input("input the data destination: \n")
+    group = int(input('input how many group should be divided: \n'))
+
+    # read data
+    import pandas as pd
+
+    try:
+        df = pd.read_csv(in_dir, encoding='big5')
+    except:
+        df = pd.read_csv(in_dir)
+
+    # data to list
+    name_list = list(df.iloc[:, 0])
+
+    # covert to num
+    df1 = pd.get_dummies(df.iloc[:, 1:])
+
+    # hierarchy graph
+    import scipy
+    import scipy.cluster.hierarchy as sch
+    from scipy.cluster.vq import vq, kmeans, whiten
+    import numpy as np
+    import matplotlib.pylab as plt
+
+    # 1. 層次聚類
+    # 生成點與點之間的距離矩陣,這裡用的歐氏距離:
+    disMat = sch.distance.pdist(df1, 'euclidean')
+    # 進行層次聚類:
+    Z = sch.linkage(disMat, method='average')
+    # 將層級聚類結果以樹狀圖表示出來並儲存為plot_dendrogram.png
+    P = sch.dendrogram(Z, labels=name_list)
+
+    # team list
+    if len(P['ivl']) % group == 0:
+        temp = np.asarray(P['ivl'])
+    else:
+        temp = P['ivl'] + [''] * (group - len(P['ivl']) % group)
+    temp = np.asarray(temp).reshape(int(len(temp) / group), group)
+
+    # output data
+    team_sheet = pd.DataFrame(temp)
+    team_sheet.columns = ['team_' + str(i + 1) for i in range(group)]
+    team_sheet.to_csv(ot_dir, encoding='utf-8-sig')
+    print('Finished!!!! Please check your destination file~')
