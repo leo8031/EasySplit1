@@ -18,5 +18,6 @@ User Manual:
 * 請注意，輸入資料前必須輸入清單沒有重複的人名
 * 資料檔案第一欄必須是可辨識的名稱或是代號
 * 資料檔案第二欄後為使用者自訂義的資料欄位，使用者可根據部門、職級、樓層...進行自訂義的調整
+* 若遇到任何問題歡迎來信至data.analytics@tw.ey.com或leoweng9@gmail.com
 
 @Authored by EY-DA/DET Teams/@Powered by Python
