@@ -18,7 +18,7 @@ if __name__ == '__main__':
     # covert to num
     df1 = pd.get_dummies(df.iloc[:, 1:])
 
-    # hierarchy graph
+    # hierarchy cluster
     import scipy
     import scipy.cluster.hierarchy as sch
     import numpy as np
