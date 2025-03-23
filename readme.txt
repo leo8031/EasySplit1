@@ -1,9 +1,18 @@
-Our purpose:
-* 本程式可以提供使用者針對現有組織進行簡單分類，以達到在疫情下分組上班的目的
+Below is the English translation of the provided Chinese text, formatted with markdown for clarity:
 
-User Manual:
-* 程式使用方法請詳閱壓縮檔內的readme.txt
-* 要使用有使用者介面版本，請下載 分組app(GUI版)_v0.2.7z <= 歡迎大家使用這個新版本，不需要再手動輸入路徑，並會自動在使用者指定的資料夾產生grouping_result.csv檔案
-* 要使用無使用者介面版本，請下載 分組app(無圖版)_v0.4.7z
+---
 
-@Authored by Leo_Weng/@Powered by Python
+**Our purpose:**  
+* This program enables users to perform simple grouping of employees within an existing organization to facilitate staggered work shifts during the pandemic.
+
+**User Manual:**  
+* For instructions on how to use the program, please refer to the `readme.txt` file inside the compressed archive.  
+* To use the version with a user interface, please download `Grouping App (GUI version)_v0.2.7z`.  
+  **Note:** Welcome to use this new version; you no longer need to manually input the path, and it will automatically generate the `grouping_result.csv` file in the user-specified folder.  
+* To use the version without a user interface, please download `Grouping App (no GUI version)_v0.4.7z`.
+
+**Authored by Leo_Weng / Powered by Python**
+
+---
+
+This translation captures the full meaning of the original text in clear and natural English, organized for easy reading.
